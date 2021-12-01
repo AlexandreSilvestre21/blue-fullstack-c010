@@ -1,0 +1,27 @@
+{
+  "name": "blue-fullstack-c010",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreSilvestre21/blue-fullstack-c010.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandreSilvestre21/blue-fullstack-c010/issues"
+  },
+  "homepage": "https://github.com/AlexandreSilvestre21/blue-fullstack-c010#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
