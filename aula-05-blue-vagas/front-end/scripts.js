@@ -30,7 +30,7 @@ const getVagas = async () => {
       "beforeend",
       `
             <tr>
-                <th scope="row">${vaga.id}</th>
+                <th scope="row">${vaga.id} ${ vaga.visualizado ? 'visualizada': 'nao visualizada' }</th>
                 <td>${vaga.empresa}</td>
                 <td>${vaga.oportunidade}</td>
                 <td>${vaga.tipo}</td>
@@ -38,6 +38,9 @@ const getVagas = async () => {
                 <td>
                     <button class="btn btn-primary" onclick="editaVaga(${vaga.id})">Editar</button>
                     <button class="btn btn-danger" onclick="deleteVaga(${vaga.id})">Deletar</button>
+                    <input type="checkbox" onclick="marcarVisualizacao(${vaga.id})" ${ vaga.visualizado ? 'checked': '' }/> assistido
+                    ${ vaga.visualizado ? '': `<button class="btn btn-info" onclick="marcarVisualizacao(${vaga.id})">Visualizar</button>` }
+                    
                 </td>
             </tr>
         `
@@ -174,6 +177,24 @@ const deleteVaga = async (id) => {
     alert(result.message);
     
     // limpos a lista de vagas para que possa ser renderizada novamente sem a vaga que excluimos
+    lista.innerHTML = '';
+    getVagas();
+}
+
+const marcarVisualizacao = async(id) => {
+    const vaga = await getById(id);
+    if(vaga.visualizado) {
+        vaga.visualizado = false;
+    }   else {
+        vaga.visualizado = true;
+    }
+    const response = await fetch(`${apiUrl}/vagas/edit/${id}`, {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(vaga)
+    })
     lista.innerHTML = '';
     getVagas();
 }

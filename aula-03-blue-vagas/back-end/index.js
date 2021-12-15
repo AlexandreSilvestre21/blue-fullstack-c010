@@ -2,7 +2,7 @@
 // importar o express para que seja possivel ultilizar as suas funcoes na nossa aplicacao
 const express = require('express');
 
-//importo o lib cors 
+//importo o lib cors
 const cors = require('cors')
 
 // inicilizar o express no nosso arquivo javascript para que ele possa assumir as funcoes do servidor
@@ -22,11 +22,6 @@ const vagasRouter = require('./routes/vagas.route');
 
 // falo pro backend usar as minha rotas para o endpoint /vagas
 app.use('/vagas', vagasRouter);
-
-
-
-
-
 
 // Definir a porta que o meu backend irá executar
 const port = 3000;

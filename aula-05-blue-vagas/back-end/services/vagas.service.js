@@ -4,28 +4,32 @@ const blueVagas = [
         empresa: "Blue",
         salario: 3000,
         oportunidade: "Front-End Jr",
-        tipo: "estágio"
+        tipo: "estágio",
+        visualizado: false,
     },
     {
         id: 2,
         empresa: "Google",
         salario: 10000,
         oportunidade: "Front-End Jr",
-        tipo: "CLT"
+        tipo: "CLT",
+        visualizado: false,
     },
     {
         id: 3,
         empresa: "Facebook",
         salario: 20000,
         oportunidade: "Full Stack Sr",
-        tipo: "PJ"
+        tipo: "PJ",
+        visualizado: false,
     },
     {
         id: 4,
         empresa: "Amazon",
         salario: 15000,
         oportunidade: "Full Stack Pl",
-        tipo: "CLT"
+        tipo: "CLT",
+        visualizado: false,
     }
 ]
 

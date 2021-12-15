@@ -1,4 +1,4 @@
-//importar o mongoose
+//importar o mongoose - ferramenta que auxilia no desenvolvimento com banco de dados mongoBD.
 const mongoose = require('mongoose');
 
 // Schemas --> é a estrutura de dados do documento('linha tabela') que é aplicado por meio da camada de aplicativo
@@ -13,6 +13,7 @@ const gamesModel = new mongoose.Schema({
   nota: { type: Number, required: true},
   plataforma: { type: String, required: true},
   valor: {type: String, required: true},
+  anoLancamento: {type: String, required: true},
   dataCriacao: { type: Date, default: Date.now }
 })
 

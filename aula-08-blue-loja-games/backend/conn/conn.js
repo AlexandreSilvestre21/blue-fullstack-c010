@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // declaro uma funcao para ser a  funcao de conexao
-// url da conexao = mongodb://servidor:porta/nomedobanco
+// url da conexao = mongodb://servidor:porta/
 // useNewUrlParser = fala pro mongo db trabalhar com o novo sistema de url
 
 const Conn = () => {
